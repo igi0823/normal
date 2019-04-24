@@ -14,8 +14,18 @@
         </filter>
     </appender>
 
-    <root level="info">
+    <!--<appender name="sentry-raven" class="com.getsentry.raven.logback.SentryAppender">
+        &lt;!&ndash;每个项目生成不通的key&ndash;&gt;
+        <dsn>http://5bdb8ea5f1db4d45b9c2b9274733903d:31f6bde9cf5a4a40a70b60413974d845@sentry.qfang.com:9000/2</dsn>
+        &lt;!&ndash;设置拦截的最低级别为error&ndash;&gt;
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>-->
+
+    <root level="INFO">
         <appender-ref ref="consoleLog"/>
         <appender-ref ref="sentry"/>
+        <!--<appender-ref ref="sentry-raven"/>-->
     </root>
 </configuration>

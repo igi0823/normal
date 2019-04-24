@@ -33,6 +33,6 @@ public class SentryConfig {
 
     @PostConstruct
     public void init(){
-        Sentry.init("https://2df32d9ff1d848d39d198c9dac372fe3:e0a2310c8d2e485b93ac837fab72e74a@sentry.io/1425079");
+        Sentry.init("http://1add998a8d6842929ab37035f2bc76cf:57481e4a6dd0405b92328fdcdf90e665@sentry.qfang.com:9000/2");
     }
 }

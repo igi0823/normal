@@ -21,18 +21,14 @@ public class LogbackController {
 
     private final Logger logger = LoggerFactory.getLogger(LogbackController.class);
 
-    @GetMapping("/record")
-    public String recordException(@RequestParam String name) {
-
-        try{
-            throw new MyException("遇见"+name+"是个错误！");
-        }catch (Exception msg){
-            logger.error(msg.getMessage(),msg);
-        }
-        return "Hello World!";
+    @GetMapping("/send")
+    public String sendError()throws Exception{
+        Integer r = 2/0;
+        return "finished";
     }
 
-//  post方式，参数是json类型
+
+    //  post方式，参数是json类型
     @PostMapping("/trail1")
     public TrailForm taril1(@RequestBody TrailForm trailForm){
 
